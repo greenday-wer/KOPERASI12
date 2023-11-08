@@ -23,6 +23,9 @@ Route::get('/', function () {
     return view('dashboard');
 });
 
+Route::get('mahasiswa/formku', 'MahasiswaController@formku')->name('mahasiswa.formku');
+
+
 // Route::get("/kiri",[TestController::class,"learn"]);
 // Route::get('/belajar', function () {
 //     return view('belajar');

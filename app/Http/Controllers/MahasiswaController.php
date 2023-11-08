@@ -13,6 +13,7 @@ class MahasiswaController extends Controller
     /**
      * Display a listing of the resource.
      */
+
     public function index(Request $resquest)
     {
         $katakunci = $resquest->katakunci;
