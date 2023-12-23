@@ -19,9 +19,12 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('dashboard');
-});
+// Route::get('/', function () {
+//     return view('dashboard');
+// });
+
+// Route::get('/{any}', 'AppController@index')->where('any', '.*');
+
 
 Route::get('mahasiswa/formku', 'MahasiswaController@formku')->name('mahasiswa.formku');
 

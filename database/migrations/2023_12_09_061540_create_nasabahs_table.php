@@ -11,8 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kontaks', function (Blueprint $table) {
+        Schema::create('nasabahs', function (Blueprint $table) {
             $table->id();
+            $table->string('nama');
+            $table->string('alamat')->nullable();
+            $table->string('telepon')->nullable();;
+            $table->date('lahir')->nullable();
+            $table->enum('gender',['Pria','Wanita'])->default('Pria');
+            $table->unsignedBigInteger('agama_id');
             $table->timestamps();
         });
     }
@@ -22,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('kontaks');
+        Schema::dropIfExists('nasabahs');
     }
 };

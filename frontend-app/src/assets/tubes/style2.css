@@ -1,0 +1,84 @@
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+      scroll-behavior: smooth;
+    }
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');  
+
+  body {
+  margin: 0;
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: var(--bs-body-color);
+  text-align: var(--bs-body-text-align);
+  background-color: var(--bs-body-bg);
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/* Styling for Hero Section */
+section{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+ 
+section h1{
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #683aa4;
+    text-align: left;
+    margin-bottom: 20px;
+} 
+
+section p{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+button{
+    max-width: 50%;
+    border-radius: 50px !important;
+}
+
+#hero .col{
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+}
+
+#hero .img-col{
+    justify-content: flex-end;
+    margin-top: 100px;
+}
+
+#hero img{
+    max-width: 130%;
+    width: 130%;
+}
+
+/* Styling for the cards */
+#hero .card{
+    box-shadow: 11px 7px 16px #f9f9f9;
+    border: 0;
+    text-align: center;
+}
+
+ #hero .cards .card{
+    width: 18rem;
+}
+
+/* Styling for icon if you add them */
+#hero .icon{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

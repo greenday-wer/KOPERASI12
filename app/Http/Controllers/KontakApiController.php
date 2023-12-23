@@ -1,17 +1,18 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\kontak;
+use App\Models\Kontak;
 use Illuminate\Http\Request;
+//pada penamaan class harus sesuai tidak boleh asal isi misal app harus App
 
-class KontakController extends Controller
+class KontakApiController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
+        return Kontak::all();
         //
     }
 
@@ -28,21 +29,25 @@ class KontakController extends Controller
      */
     public function store(Request $request)
     {
+        $kontak = new Kontak();
+        $kontak->fill($request->all())->save();
+        return $kontak;
         //
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(kontak $kontak)
+    public function show(string $id)
     {
+        return Kontak::find($id);
         //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(kontak $kontak)
+    public function edit(string $id)
     {
         //
     }
@@ -50,16 +55,21 @@ class KontakController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, kontak $kontak)
+    public function update(Request $request, string $id)
     {
+        $kontak = Kontak::find($id);
+        $kontak->fill($request->all())->save();
+        return $kontak;   
         //
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(kontak $kontak)
+    public function destroy(string $id)
     {
+        $kontak = Kontak::find($id);
+        $kontak->delete();
         //
     }
 }
