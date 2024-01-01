@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Agama;
+use App\Models\agama;
 use Illuminate\Http\Request;
 
 class AgamaApiController extends Controller
